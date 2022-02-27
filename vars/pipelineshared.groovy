@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/"${gitbranch}"']], extensions: [], userRemoteConfigs: [[url: "${gitrep}"]]])
+                checkout([$class: 'GitSCM', branches: [[name: "*/${gitbranch}"]], extensions: [], userRemoteConfigs: [[url: "${gitrep}"]]])
             }
         }
         stage('print') {
